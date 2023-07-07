@@ -3,10 +3,10 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import viewsets
 
 import api.serializers as sl
-from api.permissions import IsAutorOrReadOnly
+from api.permissions import IsAuthorOrReadOnly
 from posts.models import Group, Post
 
-API_PERMISSIONS = [IsAuthenticated, IsAutorOrReadOnly]
+API_PERMISSIONS = [IsAuthenticated, IsAuthorOrReadOnly]
 
 
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
